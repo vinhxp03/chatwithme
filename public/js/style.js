@@ -26,7 +26,7 @@ socket.on("server-logon-success", function (data) {
 socket.on("server-list-data", function (data) {
 	$("#userOnline").html("");
 	data.forEach(function (i) {
-		$("#userOnline").append("<li class='contact'><div class='wrap'><span class='contact-status online'></span><img src='pic/user.png'/><div class='meta'><p class='name'>"+i+"</p><p class='preview'>null</p></div></div></li>");
+		$("#userOnline").append("<li class='contact'><div class='wrap'><span class='contact-status online'></span><img src='pic/user.png'/><div class='meta'><p class='name'>"+i+"</p><p class='preview'>...</p></div></div></li>");
 	})
 });
 
