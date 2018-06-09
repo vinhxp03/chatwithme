@@ -10,6 +10,11 @@ socket.on("server-logon-fail-null", function (data) {
 	alert("Nickname không được bỏ trống.");
 });
 
+//login thất bại
+socket.on("server-logon-fail-maxlegth", function (data) {
+	alert("Nickname không được dài quá 12 ký tự.");
+});
+
 // đăng nhập thành công
 socket.on("server-logon-success", function (data) {
 	$("#curUser").html(data);
