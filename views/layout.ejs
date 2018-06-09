@@ -1,0 +1,73 @@
+<!DOCTYPE html><html class=''>
+<head>
+	<meta charset='UTF-8'>
+	<title>Chat with me!</title>
+	<link rel="shortcut icon" type="image/x-icon" href="pic/online.png"/>
+	<meta name="robots" content="noindex">
+	<!-- <script src="js/hoy3lrg.js"></script> -->
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<link rel='stylesheet prefetch' href='css/reset.min.css'>
+	<link rel='stylesheet prefetch' href='css/font-awesome.min.css'>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="socket.io/socket.io.js"></script>
+</head>
+<body>
+<div id="login-chat">
+	<div class="title">
+		<h1>Welcome to Chat with me!</h1>
+	</div>
+	<div id="header">
+		<img src="pic/haha.png" alt="">
+	</div>
+	<div id="login">
+		<input type="text" id="txtUser" placeholder="Nickname của bạn..."><br>
+		<input type="submit" id="btnLogin" value="Bắt đầu chat">
+	</div>
+</div>
+<div id="frame">
+	<div id="sidepanel">
+		<div id="profile">
+			<div class="wrap">
+				<img id="profile-img" src="pic/online.png" class="online"/>
+				<p>Đang Online!</p>
+			</div>
+		</div>
+		<div id="search">
+				
+		</div>
+		<div id="contacts">
+			<ul id="userOnline">
+				<li class="contact"><div class="wrap" ><span class="contact-status online"></span><img src="pic/user.png"/><div class="meta"><p class="name"></p><p class="preview"></p></div></div></li>
+			</ul>
+		</div>
+		<div id="bottom-bar">
+			<span><marquee behavior="" direction="">
+				Hello everyone - Have a nice day!
+			</marquee></span>
+		</div>
+	</div>
+	<div class="content">
+		<div class="contact-profile">
+			<img src="pic/user.png" alt="" />
+			<p id="curUser"></p>	
+			<div class="social-media">
+				<i class="fa fa-sign-out" id="btnLogout" aria-hidden="true">Thoát</i>
+			</div>
+		</div>
+		<div class="messages">
+			<ul id="messages">
+				<!--Nội dung chat-->
+			</ul>
+		</div>
+		<div class="message-input">
+			<div class="wrap">
+			<input type="text" id="txtmessage" placeholder="Write your message..." />
+			<button class="submit" id="btnSend"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+			</div>
+		</div>
+	</div>
+</div>
+	<script src='js/jquery.min.js'></script>
+	<script src="js/style.js"></script>
+</body>
+</html>
