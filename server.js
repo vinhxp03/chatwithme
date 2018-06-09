@@ -26,6 +26,8 @@ io.on("connection", function (socket) {
 		if (arrUser.indexOf(data)>=0) {
 			// kết nối thất bại
 			socket.emit("server-logon-fail",data)
+		}else if(data.length>12){
+			socket.emit("server-logon-fail-maxlegth",data);
 		}else if(data==""){
 			socket.emit("server-logon-fail-null",data);
 		}else{
