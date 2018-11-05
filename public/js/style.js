@@ -1,5 +1,5 @@
-// var socket = io("https://chatwithmenow.herokuapp.com");
-var socket = io("http://localhost:3000");
+var socket = io("https://chatwithmenow.herokuapp.com");
+// var socket = io("http://localhost:3000");
 
 //login thất bại
 socket.on("server-logon-fail", function (data) {
@@ -15,7 +15,6 @@ socket.on("server-logon-fail-null", function (data) {
 socket.on("server-logon-fail-maxlegth", function (data) {
 	alert("Nickname không được dài quá 12 ký tự.");
 });
-
 // đăng nhập thành công
 socket.on("server-logon-success", function (data) {
 	$("#curUser").html(data);
@@ -27,7 +26,7 @@ socket.on("server-logon-success", function (data) {
 socket.on("server-list-data", function (data) {
 	$("#userOnline").html("");
 	data.forEach(function (i) {
-		$("#userOnline").append("<li class='contact'><div class='wrap'><span class='contact-status online'></span><img src='pic/user.png'/><div class='meta'><p class='name'>"+i+"</p><p class='preview'>...</p></div></div></li>");
+		$("#userOnline").append("<li class='contact'><div class='wrap'><span class='contact-status online'></span><img src='pic/user.png'/><div class='meta'><p class='name'>"+i+"</p><p class='preview'>null</p></div></div></li>");
 	})
 });
 

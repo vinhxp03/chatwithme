@@ -8,6 +8,17 @@ var server = require("http").Server(app);
 var io = require("socket.io")(server);
 server.listen(process.env.PORT || 3000);
 
+var pg = require('pg');
+var config = {
+  	user: 'ec2-23-23-153-145.compute-1.amazonaws.com',
+  	host: 'database.server.com',
+  	database: 'deqrqo9tjpmoee',
+  	password: 'ae21229656e51b7bff76399ee85d6402e5f8b881e7b55a3eba94389e9463f4b7',
+  	port: 5432,
+  	max: 10,
+  	idleTimeoutMillis: 30000
+};
+
 var arrUser=[]; // mảng user
 
 io.on("connection", function (socket) {	
