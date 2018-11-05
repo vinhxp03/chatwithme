@@ -8,7 +8,7 @@ var server = require("http").Server(app)
 var io = require("socket.io")(server)
 server.listen(process.env.PORT || 3000)
 
-var pg = require('pg')
+/*var pg = require('pg')
 var config = {
   	user: 'ec2-23-23-153-145.compute-1.amazonaws.com',
   	host: 'database.server.com',
@@ -40,7 +40,7 @@ pool.connect((err, client, done) => {
       	console.log(res.rows[0])
     	}
   	})
-})
+})*/
 
 var arrUser=[] // mảng user
 
