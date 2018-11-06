@@ -68,7 +68,8 @@ $(document).ready(function () {
 	// gửi nội dung chat lên server
 	$("#btnSend").click(function () {
 		message = $("#txtmessage").val()
-		if(message.trim() == '') {
+		if(message.trim() == '' || message.length > 35) {
+			alert("Tin nhắn không được bỏ trống hoặc dài quá 35 ký tự!")
 			return false
 		}
 		socket.emit("client-send-message",message)
@@ -77,7 +78,8 @@ $(document).ready(function () {
 	$(window).on('keydown', function(e) {
 	  if (e.which == 13) {
 	  	message = $("#txtmessage").val()
-		if(message.trim() == '') {
+		if(message.trim() == '' || message.length > 35) {
+			alert("Tin nhắn không được bỏ trống hoặc dài quá 35 ký tự!")
 			return false
 		}
 	    socket.emit("client-send-message",message)
