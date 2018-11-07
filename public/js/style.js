@@ -125,7 +125,7 @@ $(document).ready(function () {
         }
 
         if ($.trim(message) == '') {
-        	$('#exampleModal').modal();
+        	// $('#exampleModal').modal();
             return false;
         }
         socket.emit("client-send-message",message);
