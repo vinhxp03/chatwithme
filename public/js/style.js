@@ -1,4 +1,5 @@
-var socket = io("http://localhost:3000");
+var socket = io("https://chatwithmenow.herokuapp.com")
+// var socket = io("http://localhost:3000");
 
 //login thất bại
 socket.on("server-login-fail", function (data) {
