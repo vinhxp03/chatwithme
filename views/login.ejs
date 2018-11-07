@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en' class=''> 
+<head>
+	<meta charset='UTF-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="pic/online.png"/>
+    <link href="css/googleapis.css" rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="css/login-style.css">
+    <link rel="stylesheet prefetch" href="css/reset.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="socket.io/socket.io.js"></script>
+    <script>
+        try {
+            Typekit.load({
+                async: true
+            });
+        } catch (e) {}
+    </script>
+    <style>
+    	.login h1 {margin-bottom: 10px}
+    	.login .fogot-pass {margin-top: 10px}
+    	.btn-primary.focus, .btn-primary:focus {box-shadow: none;}
+    </style>
+</head>
+<body> 
+	<div class="login"> 
+		<h1>ĐĂNG NHẬP</h1> 
+		<div> 
+			<input type="text" name="u" id="txtUser" placeholder="Tên đăng nhập" /> 
+			<!-- <input type="password" name="p" placeholder="Mật khẩu" required="required" />  -->
+			<input type="submit" class="btn btn-primary btn-block btn-large" id="btnLogin" value="Vào Chat">
+		</div> 
+		<!-- <div class="fogot-pass">
+		        	<a href="#">Đăng ký</a> || <a href="#">Quên mật khẩu</a>
+		      	</div> -->
+	</div>
+	<script src="js/login-style.js"></script>
+</body>
+</html>
