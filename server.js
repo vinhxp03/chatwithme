@@ -8,6 +8,35 @@ var server = require("http").Server(app);
 var io = require("socket.io")(server);
 server.listen(process.env.PORT || 3000);
 
+// Mongo
+/*var MongoClient = require('mongodb').MongoClient;
+var url = "mongodb://localhost:27017/";
+
+MongoClient.connect(url, function(err, db) {
+  	if (err) throw err;
+  	var dbo = db.db("shop");
+  	var myobj = { name: "Company Inc", address: "Highway 37" };
+  	dbo.collection("book").insertOne(myobj, function(err, res) {
+    	if (err) throw err;
+    	console.log("1 document inserted");
+    	db.close();
+  	});
+});*/
+
+/*var MongoClient = require('mongodb').MongoClient;
+
+var uri = "mongodb+srv://vinhphan:admin@cluster0-1fqex.gcp.mongodb.net/chatwithme?retryWrites=true";
+MongoClient.connect(uri, function(err, db) {
+	if (err) throw err;
+	var dbo = db.db("chatwithme");
+	var myobj = { name: "Company Inc", address: "Highway 37" };
+	dbo.collection("messages").insertOne(myobj, function(err, res) {
+		if (err) throw err;
+		console.log("1 document inserted");
+		db.close();
+	});
+});*/
+
 var arrUser=[]; // mảng user
 
 io.on("connection", function (socket) {	
@@ -46,6 +75,7 @@ io.on("connection", function (socket) {
 
 	// xử lý chat
 	socket.on("client-send-message",function (data) {
+		console.log(data);
 		socket.emit("server-send-message-client", {uname:socket.username,mess:data}); // truyền JSON về client
 		socket.broadcast.emit("server-send-message-broad", {uname:socket.username,mess:data});
 	})
